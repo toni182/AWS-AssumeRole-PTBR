@@ -1,7 +1,7 @@
 # Pré-requisitos
 
 -   **Acesso administrativo** à sua própria conta AWS (**Conta A**) e à
-    **Conta de Destino (Conta B)**.\
+    **Conta de Destino (Conta B)**.
 -   Os passos referentes à Conta B podem ser executados por qualquer
     **usuário da Conta B** com permissões administrativas.
 
