@@ -22,6 +22,7 @@ necessidade.
 
 Esta Stack cria automaticamente **uma IAM Role com permissões
 administrativas completas** na Conta B.\
+
 **IMPORTANTE:**\
 A Role criada por este método possui **permissão administrativa
 (AdministratorAccess)**.\
