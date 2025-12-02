@@ -18,7 +18,7 @@ necessidade.
 
 ## 1.1 Método A --- Criar a Role via CloudFormation (Recomendado)
 
-**Arquivo da Stack:** `stack-ar.yaml` (presente neste repositório)
+**Arquivo da Stack:** [stack-ar.yaml](./stack-ar.yaml) (presente neste repositório)
 
 Esta Stack cria automaticamente **uma IAM Role com permissões
 administrativas completas** na Conta B.\
