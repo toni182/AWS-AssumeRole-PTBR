@@ -1,0 +1,30 @@
+AWSTemplateFormatVersion: "2010-09-09"
+Description: "IAM Role para ser assumida por outra conta AWS com permissão AdministratorAccess."
+
+Parameters:
+  TrustedAccountId:
+    Type: String
+    Description: "ID da conta AWS que irá assumir esta role."
+    MinLength: 12
+    MaxLength: 12
+    AllowedPattern: "^[0-9]+$"
+
+Resources:
+  CrossAccountAdminRole:
+    Type: AWS::IAM::Role
+    Properties:
+      RoleName: "CrossAccountAdminRole"
+      AssumeRolePolicyDocument:
+        Version: "2012-10-17"
+        Statement:
+          - Effect: "Allow"
+            Principal:
+              AWS: !Sub "arn:aws:iam::${TrustedAccountId}:root"
+            Action: "sts:AssumeRole"
+      ManagedPolicyArns:
+        - "arn:aws:iam::aws:policy/AdministratorAccess"
+
+Outputs:
+  RoleArn:
+    Description: "ARN da role criada para cross-account AssumeRole."
+    Value: !GetAtt CrossAccountAdminRole.Arn
