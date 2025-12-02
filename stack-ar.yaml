@@ -4,7 +4,7 @@ Description: "IAM Role para ser assumida por outra conta AWS com permissão Admi
 Parameters:
   TrustedAccountId:
     Type: String
-    Description: "ID da conta AWS que irá assumir esta role."
+    Description: "ID da conta AWS que irá assumir esta role"
     MinLength: 12
     MaxLength: 12
     AllowedPattern: "^[0-9]+$"
